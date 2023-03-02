@@ -1,5 +1,7 @@
 package studio5;
 
+import org.junit.Test;
+
 import edu.princeton.cs.introcs.StdDraw;
 
 public class Methods {
@@ -16,7 +18,9 @@ public class Methods {
 	public static double distanceBetween(double x1, double y1, double x2, double y2) {
 		double distance = 0;
 		// FIXME: Hint use Math methods (e.g. Math.sqrt) to compute the distance
-		
+		double j = Math.pow(x2-x1, 2);
+		double k = Math.pow(y2-y1, 2);
+		distance = Math.sqrt(j + k);
 		return distance;
 	}
 
@@ -31,6 +35,15 @@ public class Methods {
 		StdDraw.setPenColor(StdDraw.BLACK);
 		StdDraw.filledCircle(x, y, radius);
 
+		StdDraw.setPenColor(StdDraw.BLUE);
+		StdDraw.filledCircle(x, y, (3.0/4.0)*radius);
+		
+		StdDraw.setPenColor(StdDraw.RED);
+		StdDraw.filledCircle(x, y, (1.0/2.0)*radius);
+		
+		StdDraw.setPenColor(StdDraw.YELLOW);
+		StdDraw.filledCircle(x, y, (1.0/4.0)*radius);
+		
 		// TODO: Draw the remaining rings of the bull's eye
 		// Blue ring with 3.0/4.0 the radius
 		// suggested rgb values: 0, 109, 219
